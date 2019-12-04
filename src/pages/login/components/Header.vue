@@ -5,15 +5,16 @@
         <img src="@/assets/login.png" alt />
       </div>
       <div class='login-input'>
-        <div class='login-type'>
+        <div class='login-type input-width'>
           <div class='login-pwd'>密码登录</div>
+          <span>|</span>
           <div class='login-mes'>短信登录</div>
         </div>
         <div class='input-item'>
-          <input type="text"  placeholder="用户名">
+          <input class='input-width' type="text"  placeholder="用户名">
           </div>
         <div class='input-item'>
-          <input type="password"  placeholder="密码">
+          <input class='input-width' type="password"  placeholder="密码">
         </div>
         <div class='pwd-info'>
           <div  class='rem-pwd'>
@@ -21,13 +22,19 @@
           </div>
           <div class='fog-pwd'>
             <a href="#">忘记密码</a>
+             <span>|</span>
             <a href="#">注册</a>
           </div>
         </div>
-        <button class='login-btn'>登录</button>
+        <router-link to='/home'>
+        <button class='login-btn input-width'>登录</button>
+        </router-link>
       </div>
    </div>
    <div class="login-info">
+     <p class="title">为爱发电之风华无双个人基站</p>
+     <p>这辈子遇见你，也不知知识良缘还是孽缘---谢云</p>
+     <p>风华无双是一名中文配音CV，自2008年加入配音圈，出品了很多广播剧、视频剧等作品</p>
    </div>
  </div>
 </template>
@@ -40,12 +47,11 @@ export default {
  .login-box {
    width:100%;
    height:100%;
-   background-color: #f0f7fb;
  }
   .login-content {
    position: relative;
    height:500px;
-   background:linear-gradient(-160deg,rgb(237, 241, 243),rgb(252, 252, 253));
+   background:linear-gradient(-160deg,rgb(198, 236, 250),rgb(252, 252, 253));
    .login-img {
       position: absolute;
       top: 80px;
@@ -67,8 +73,6 @@ export default {
      .login-type{
        margin: 0 auto;
        margin-top:30px;
-       height: 40px;
-       width: 280px;
        line-height: 40px;
        border-bottom:1px solid #cccccc;
        color: #cccccc;
@@ -85,8 +89,6 @@ export default {
      }
      .input-item{
       input{
-        width:280px;
-        height:38px;
         margin-top:25px;
         background:rgb(232, 240, 254);
         border-radius:4px;
@@ -119,11 +121,22 @@ export default {
    }
   }
   .login-btn{
-    width: 280px;
-    height: 38px;
     border-radius:4px;
     background-color:rgb(101, 158, 196);
     color:#fff
   }
+  }
+  .login-info{
+    p{
+      color:rgb(101, 158, 196);
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px
+    }
+    .title{
+      font-weight: bold;
+      margin-top: 25px;
+      font-size: 14px
+    }
   }
 </style>
