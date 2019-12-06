@@ -32,9 +32,9 @@
       </div>
    </div>
    <div class="login-info">
-     <p class="title">为爱发电之风华无双个人基站</p>
-     <p>这辈子遇见你，也不知知识良缘还是孽缘---谢云</p>
-     <p>风华无双是一名中文配音CV，自2008年加入配音圈，出品了很多广播剧、视频剧等作品</p>
+     <p class="title">CV风华无双</p>
+     <p>这辈子遇见你，也不知是良缘还是孽缘</p>
+     <p>为爱发电伪程序员@copy荣嬷嬷哒</p>
    </div>
  </div>
 </template>
@@ -89,16 +89,18 @@ export default {
      }
      .input-item{
       input{
+        box-sizing: border-box;
         margin-top:25px;
+        padding-left: 15px;
         background:rgb(232, 240, 254);
         border-radius:4px;
         border:1px solid #cccccc;
+        caret-color:#181d20;  //caret-color 属性修改input输入框里闪烁光标的颜色
      }
       input::-webkit-input-placeholder {
         color: #cccccc;
         font-size:14px;
         font-family:MicrosoftYaHei;
-        padding-left:16px;
       }
    }
    .pwd-info{
