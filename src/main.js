@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import './assets/styles/reset.css'
 import './assets/styles/public.css'
+import './assets/styles/iconfont.css'
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(Element)
 
 Vue.config.productionTip = false
 
