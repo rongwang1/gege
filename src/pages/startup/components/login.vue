@@ -14,6 +14,7 @@
     <el-dialog
     title="温馨提示"
     :visible.sync="dialogVisible"
+    :before-close="handleClose"
     center
     :append-to-body="true"
     width="30%">
@@ -59,6 +60,13 @@ export default {
           return false
         }
       })
+    },
+    handleClose (done) {
+      this.$confirm('要关闭喽？')
+        .then(_ => {
+          done()
+        })
+        .catch(_ => {})
     }
   }
 }
