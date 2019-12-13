@@ -6,7 +6,7 @@
          <li><a href="#">作品展示</a></li>
          <li><a href="#">直播</a></li>
          <li><a href="#">安利</a></li>
-         <li><a href="#">联系我们</a></li>
+         <li><a href="#">联系</a></li>
        </ul>
      </div>
  </div>
