@@ -119,7 +119,7 @@ export default {
           width: 350px;
           margin-left: 40px;
           line-height: 20px;
-        }                                                                                                                               
+        }                                                                                                                      
       }
     }
   }

@@ -5,16 +5,21 @@
           <img  class="banner-img" :src="item.url" alt="#">
        </el-carousel-item>
    </el-carousel>
+   <list-content></list-content>
  </div>
 </template>
 <script>
+import ListContent from './content'
 export default {
   name: 'HomeList',
+  components: {
+    ListContent
+  },
   data () {
     return {
       swiperList: [{
         id: '001',
-        url: 'http://bpic.51yuansu.com/banner/banner19-shengdan.png'
+        url: 'http://pic.51yuansu.com/banner/banner19-invite.jpg'
       },
       {
         id: '002',
@@ -41,5 +46,8 @@ export default {
 }
 </script>
 <style lang="scss">
+  .banner-img{
+    width: 100%;
+    height: 100%;
+  }
 </style>
-
