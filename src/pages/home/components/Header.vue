@@ -4,44 +4,39 @@
      <el-col :span="16" :offset="4">
        <el-tabs v-model="activeName">
         <el-tab-pane label="CV档案"  name="first">
-         <div>
+         <div class='head'>
           <div class='head-img'>
-            <img src="@/assets/格格.jpg" alt="#"/>
+            <img src="//static.missevan.com/seiys/201604/556eb6ac9553e75d0fd8bee5148238bf182357.jpg" alt="#"/>
           </div>
-          <div class='info'>
-            <dl class='info-left'>
-              <dt>中文名 </dt>
-              <dd>风华无双</dd>
-              <dt>别&nbsp;&nbsp;&nbsp;&nbsp;名</dt>
-              <dd>格格</dd>
-              <dt>国&nbsp;&nbsp;&nbsp;&nbsp;籍</dt>
-              <dd>中国</dd>
-              <dt>出生地</dt>
-              <dd>江西省九江市</dd>
-              <dt>出生日期</dt>
-              <dd>1987年10月20日</dd>
-              <dt>职&nbsp;&nbsp;&nbsp;&nbsp;业</dt>
-              <dd>配音演员</dd>
-              <dt>代表作品</dt>
-              <dd>青龙图腾、乱世为王、艳鬼、民国遗事1931、焉知非狐、暮云深、琅琊版、剑在天下、独闯天涯广播剧</dd>
-            </dl>
-            <dl class="info-right">
-              <dt>性&nbsp;&nbsp;&nbsp;&nbsp;别</dt>
-              <dd>男</dd>
-              <dt>星&nbsp;&nbsp;&nbsp;&nbsp;座</dt>
-              <dd>天秤座</dd>
-              <dt>声音特色</dt>
-              <dd>独一无二绝美音色（无脑吹）</dd>
-              <dt>爱&nbsp;&nbsp;&nbsp;&nbsp;好</dt>
-              <dd>啃瓶子，找真爱</dd>
-              <dt>社&nbsp;&nbsp;&nbsp;&nbsp;团</dt>
-              <dd>怀旧配音联盟</dd>
-              <dt>身&nbsp;&nbsp;&nbsp;&nbsp;高</dt>
-              <dd>173</dd>
-              <dt>现居地</dt>
-              <dd>日本</dd>
-            </dl>
+          <div  class=info>
+             <h1 class='info-title'>风华无双</h1>
+             <table>
+               <tbody>
+                 <tr>
+                   <td><span>性别</span>&nbsp;&nbsp;&nbsp;&nbsp;男</td>
+                   <td><span>职业</span>&nbsp;&nbsp;&nbsp;&nbsp;中文CV</td>
+                 </tr>
+                 <tr>
+                   <td><span>血型</span>&nbsp;&nbsp;&nbsp;&nbsp;保密</td>
+                   <td><span>生日</span>&nbsp;&nbsp;&nbsp;&nbsp;1987/10/20</td>
+                 </tr>
+                 <tr>
+                   <td><span>别名</span>&nbsp;&nbsp;&nbsp;&nbsp;格格</td>
+                   <td><span>所属社团</span>&nbsp;&nbsp;&nbsp;&nbsp;怀旧配音联盟</td>
+                 </tr>
+                 <tr>
+                   <td><span>出生地</span>&nbsp;&nbsp;&nbsp;&nbsp;江西省九江市</td>
+                   <td><span>代表作品</span>&nbsp;&nbsp;&nbsp;&nbsp;青龙图腾、乱世为王、艳鬼、民国遗世1931</td>
+                 </tr>
+               </tbody>
+             </table>
           </div>
+         </div>
+         <div class='content'>
+           <div class='basic-info'>
+             <div class='title'>基本信息</div>
+              <p>怀旧配音联盟CV，微博：@明玥无双。代表作品：《青龙图腾》《乱世为王》《艳鬼》《民国遗事1931》《琅琊榜》《暮云深》《剑在天下》《结发》《独闯天涯》《给我一碗小米粥》</p>
+           </div>
          </div>
         </el-tab-pane>
         <el-tab-pane label="作品展示" name="second">
@@ -69,58 +64,53 @@ export default {
 </script>
 <style lang="scss" scoped>
   .homePage{
-    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     background-color: rgb(238, 244, 248);
-    .head-img{
-      display: inline-block;
-      width: 100px;
-      height: 100px;
-      border-radius: 10px;
-     img{
-      width: 100px;
-      height: 100px;
-     }
+    .head{
+      position: relative;
+      width: 100%;
+      height: 220px;
+      margin-top:10px;
+      .head-img{
+        width: 220px;
+        height: 220px;
+        float: left;
+        img{
+          width: 100%;
+          height:100%;
+          display: block
+        }
+      }
     }
     .info{
-      width: 88%;
-      float: right;
-      .info-left{
-        display: inline-block;
-        width:50%;
-        dt{
-          width: 60px;
-          float: left;
-          font-weight: 700;
-          color: #918585;
-          margin-right: 20px;
-          line-height: 20px;;
-        }
-         dd{
-            width: 350px;
-            margin-left:40px;
-            line-height: 20px;
-        }
+      float: left;
+      width: 400px;
+      margin-left: 25px;
+      .info-title{
+        font-size: 34px;
+        font-weight: 700;
       }
-      .info-right{
-        display: inline-block;
-        width:44%;
-        margin-left: 40px;
-        dt{
-          width: 60px;
-          font-weight: 700;
-          color: #918585;
-          float: left;
-          margin-right: 20px;
+      table{
+        width: 100%;
+          tbody{
+            tr{
+              font-size: 14px;
+              height: 40px;
+              border-bottom: 2px dashed #cccccc;
+              td{
+                span{
+                  color: #9b9797
+                }
+              }
+            }
+          }
         }
-        dd{
-          width: 350px;
-          margin-left: 40px;
-          line-height: 20px;
-        }                                                                                                                      
-      }
+    }
+    .content{
+      width: 100%;
+      margin-top: 30px;
     }
   }
 </style>
