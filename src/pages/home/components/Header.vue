@@ -9,7 +9,10 @@
             <img src="//static.missevan.com/seiys/201604/556eb6ac9553e75d0fd8bee5148238bf182357.jpg" alt="#"/>
           </div>
           <div  class=info>
-             <h1 class='info-title'>风华无双</h1>
+             <h1 class='info-title'>风华无双
+               <a href="http://weibo.com/fenghuawushuang" class='iconfont  sina' target="_blank"><i>&#xe716;</i></a>
+               <a href="http://baike.baidu.com/view/3293213.htm" class='iconfont baidu' target='_blank'><i>&#xe846;</i></a>
+             </h1>
              <table>
                <tbody>
                  <tr>
@@ -35,7 +38,7 @@
          <div class='content'>
            <div class='basic-info'>
              <div class='title'>基本信息</div>
-              <p>怀旧配音联盟CV，微博：@明玥无双。代表作品：《青龙图腾》《乱世为王》《艳鬼》《民国遗事1931》《琅琊榜》《暮云深》《剑在天下》《结发》《独闯天涯》《给我一碗小米粥》</p>
+              <p class='intro'>怀旧配音联盟CV，微博：@明玥无双。代表作品：《青龙图腾》《乱世为王》《艳鬼》《民国遗事1931》《琅琊榜》《暮云深》《剑在天下》《结发》《独闯天涯》《给我一碗小米粥》</p>
            </div>
          </div>
         </el-tab-pane>
@@ -87,10 +90,21 @@ export default {
     .info{
       float: left;
       width: 400px;
-      margin-left: 25px;
+      margin-left: 30px;
       .info-title{
         font-size: 34px;
         font-weight: 700;
+        .iconfont{
+         font-size: 26px;
+         font-weight: 50;
+         color: #cccccc
+        }
+        .sina:hover{
+          color:#C20C0C;
+        }
+        .baidu:hover{
+          color: #3385ff;
+        }
       }
       table{
         width: 100%;
@@ -111,6 +125,33 @@ export default {
     .content{
       width: 100%;
       margin-top: 30px;
+      .basic-info{
+        .title{
+          position: relative;
+          font-size: 20px;
+          height: 28px;
+          font-weight: bold;
+          line-height: 28px;
+          border-left: 0;
+          padding-left: 10px;
+        }
+        .title::before{
+          content:"";
+          position: absolute;
+          display: block;
+          bottom: 4px;
+          top: 4px;
+          width: 4px;
+          left: 0px;
+          background-color: black;
+          border-radius: 4px;
+        }
+        .intro{
+         display: block;
+         margin-top: 10px;
+         line-height: 22px;
+        }
+      }
     }
   }
 </style>
