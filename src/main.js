@@ -8,10 +8,12 @@ import './assets/styles/public.css'
 import './assets/styles/iconfont.css'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import axios from 'axios'
 Vue.use(Element)
 
 Vue.config.productionTip = false
-
+// vue引用axios
+Vue.prototype.axios = axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
