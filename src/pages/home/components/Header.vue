@@ -15,9 +15,9 @@
              </h1>
              <table>
                <tbody>
-                 <tr v-for="item in info">
-                   <td><span>{{item.key}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{item.value}}</td>
-                   <td><span>{{item.key}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{item.value}}</td>
+                 <tr v-for="item in info" :key="item.id">
+                   <td><span>{{item.key1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{item.value1}}</td>
+                   <td><span>{{item.key2}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{item.value2}}</td>
                  </tr>
                </tbody>
              </table>
@@ -28,14 +28,14 @@
              <div class='title'>基本信息</div>
               <p class='intro'>怀旧配音联盟CV，微博：@明玥无双。代表作品：《青龙图腾》《乱世为王》《艳鬼》《民国遗事1931》《琅琊榜》《暮云深》《剑在天下》《结发》《独闯天涯》《给我一碗小米粥》</p>
            </div>
+           <div class='title'>配音作品</div>
            <div class='main-content' v-for="item of list" :key="item.id">
-             <div class='title'>配音作品</div>
-              <p>{{item.content}}</p>
+              <p>{{item.content}}  </p>
            </div>
          </div>
         </el-tab-pane>
         <el-tab-pane label="作品展示" name="second">
-          <home-list></home-list>
+          <home-list :swiperList="swiperList"></home-list>
         </el-tab-pane>
         <el-tab-pane label="其他" name="third">其他</el-tab-pane >
        </el-tabs>
@@ -56,8 +56,25 @@ export default {
   },
   data () {
     return {
+      swiperList: [],
       activeName: 'first'
     }
+  },
+  methods: {
+    getContentInfo () {
+      this.axios.get('../../../static/mock/list.json')
+        .then(this.getContentInfoSucc)
+    },
+    getContentInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.swiperList = data.swiperList
+      }
+    }
+  },
+  mounted () {
+    this.getContentInfo()
   }
 }
 </script>
@@ -122,30 +139,15 @@ export default {
       width: 100%;
       margin-top: 30px;
       .basic-info{
-        .title{
-          position: relative;
-          font-size: 20px;
-          height: 28px;
-          font-weight: bold;
-          line-height: 28px;
-          border-left: 0;
-          padding-left: 10px;
-        }
-        .title::before{
-          content:"";
-          position: absolute;
-          display: block;
-          bottom: 4px;
-          top: 4px;
-          width: 4px;
-          left: 0px;
-          background-color: black;
-          border-radius: 4px;
-        }
         .intro{
          display: block;
          margin-top: 10px;
          line-height: 22px;
+        }
+      }
+      .main-content{
+        p{
+          line-height: 30px;
         }
       }
     }

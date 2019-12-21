@@ -2,29 +2,29 @@
 "ret": true,
 "data":{
     "info":[{
-        "key":"性别",
-        "value":"男"
+        "id":1,
+        "key1":"性别",
+        "value1":"男",
+        "key2":"职业",
+        "value2":"中文CV"
     },{
-        "key":"职业",
-        "value":"中文CV"
+        "id":2,
+        "key1":"血型",
+        "value1":"保密",
+        "key2":"生日",
+        "value2":"1987/10/20"
     },{
-        "key":"血型",
-        "value":"保密"
+        "id":3,
+        "key1":"别名",
+        "value1":"格格",
+        "key2":"所属社团",
+        "value2":"怀旧配音联盟"
     },{
-       "key":"生日",
-       "value":"1987/10/20"
-    },{
-        "key":"别名",
-        "value":"格格"
-    },{
-        "key":"所属社团",
-        "value":"怀旧配音联盟"
-    },{
-        "key":"出生地",
-        "value":"江西省九江市"
-    },{
-        "key":"代表作品",
-        "value":" 青龙图腾、乱世为王、艳鬼、民国遗世1931"
+        "id":4,
+        "key1":"出生地",
+        "value1":"江西省九江市",
+        "key2":"代表作品",
+        "value2":" 青龙图腾、乱世为王、艳鬼、民国遗世1931"
     }],
     "list":[{
         "id":1,
@@ -44,6 +44,30 @@
     },{
         "id":6,
         "content":"古风广播剧《大漠谣》 剧透版 //霍去病"
-    }]
-}
+    }],
+    "swiperList": [{
+        "id":1,
+        "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577257794&di=41faf8d24bf150d3a8888fd229e683ea&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F09%2F20180909112613_MjAXz.thumb.700_0.jpeg"
+      },
+      {
+        "id": 2,
+        "url": "http://img4.imgtn.bdimg.com/it/u=4203944238,4070525006&fm=26&gp=0.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576663108699&di=97a8fdb919fd04689789882f288444c1&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201403%2F22%2F20140322225738_GJH4R.jpeg"
+      },
+      {
+        "id": 4,
+        "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2119718364,2571554568&fm=26&gp=0.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1026970701,1485111267&fm=26&gp=0.jpg"
+      },
+      {
+        "id": "006",
+        "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=903735196,2272250986&fm=26&gp=0.jpg"
+      }]
+   }
 }

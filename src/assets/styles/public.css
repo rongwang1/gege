@@ -2,3 +2,23 @@
     width: 280px;
     height: 40px;
 }
+.title{
+    position: relative;
+    font-size: 20px;
+    height: 28px;
+    font-weight: bold;
+    line-height: 28px;
+    border-left: 0;
+    padding-left: 10px;
+  }
+  .title::before{
+    content:"";
+    position: absolute;
+    display: block;
+    bottom: 4px;
+    top: 4px;
+    width: 4px;
+    left: 0px;
+    background-color: black;
+    border-radius: 4px;
+  }
