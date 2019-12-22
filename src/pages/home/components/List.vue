@@ -5,7 +5,7 @@
           <img  class="banner-img" :src="item.url" alt="#">
        </el-carousel-item>
    </el-carousel>
-   <list-content></list-content>
+   <list-content :imgList="imgList"></list-content>
  </div>
 </template>
 <script>
@@ -14,6 +14,27 @@ export default {
   name: 'HomeList',
   props: {
     swiperList: Array
+  },
+  data () {
+    return {
+      imgList: []
+    }
+  },
+  methods: {
+    getContentInfo () {
+      this.axios.get('../../../static/mock/list.json')
+        .then(this.getContentInfoSucc)
+    },
+    getContentInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.imgList = data.imgList
+      }
+    }
+  },
+  mounted () {
+    this.getContentInfo()
   },
   components: {
     ListContent
