@@ -37,7 +37,36 @@
         <el-tab-pane label="作品展示" name="second">
           <home-list :swiperList="swiperList"></home-list>
         </el-tab-pane>
-        <el-tab-pane label="其他" name="third">其他</el-tab-pane >
+        <el-tab-pane label="其他" name="third">
+           <el-table
+             :data="tableData"
+             border
+             style="width:100%">
+             <el-table-column
+              prop="data"
+              label="日期"
+              width="200"
+             ></el-table-column>
+             <el-table-column
+              prop="name"
+              label="角色"
+              width="150"
+             ></el-table-column>
+             <el-table-column
+               prop="works"
+               label="作品"
+             ></el-table-column>
+             <el-table-column
+               label="操作"
+               width="200"
+             >
+              <template  scope="scope">
+               <el-button @click="handleClick(scope.row)" size="small" type="text">查看</el-button>
+               <el-button  size="small" type="text">编辑</el-button>
+             </template>
+             </el-table-column>
+           </el-table>
+        </el-tab-pane >
        </el-tabs>
      </el-col>
    </el-row>
@@ -57,10 +86,29 @@ export default {
   data () {
     return {
       swiperList: [],
-      activeName: 'first'
+      activeName: 'first',
+      tableData: [{
+        data: '2019-12-23',
+        name: '谢云',
+        works: '《青龙图腾》'
+
+      },
+      {
+        data: '2019-12-24',
+        name: '莫桑',
+        works: '《艳鬼》'
+      },
+      {
+        data: '2019-12-25',
+        name: '格格',
+        works: '又帅又厉害'
+      }]
     }
   },
   methods: {
+    handleClick (row) {
+      console.log(row)
+    },
     getContentInfo () {
       this.axios.get('../../../static/mock/list.json')
         .then(this.getContentInfoSucc)
