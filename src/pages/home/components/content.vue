@@ -26,7 +26,7 @@ export default {
     width: 20%;
     height: 200px;
     float: left;
-    margin: 25px;
+    margin: 20px;
     .el-card{
       border-radius: 10px;
       .image{

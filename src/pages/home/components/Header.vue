@@ -28,8 +28,9 @@
              <div class='title'>基本信息</div>
               <p class='intro'>怀旧配音联盟CV，微博：@明玥无双。代表作品：《青龙图腾》《乱世为王》《艳鬼》《民国遗事1931》《琅琊榜》《暮云深》《剑在天下》《结发》《独闯天涯》《给我一碗小米粥》</p>
            </div>
-           <div class='title'>配音作品</div>
+           <div class="title">配音作品</div>
            <div class='main-content' v-for="item of list" :key="item.id">
+              <div class="item-type">{{item.type}}</div>
               <p>{{item.content}}  </p>
            </div>
          </div>
@@ -38,34 +39,6 @@
           <home-list :swiperList="swiperList"></home-list>
         </el-tab-pane>
         <el-tab-pane label="其他" name="third">
-           <el-table
-             :data="tableData"
-             border
-             style="width:100%">
-             <el-table-column
-              prop="data"
-              label="日期"
-              width="200"
-             ></el-table-column>
-             <el-table-column
-              prop="name"
-              label="角色"
-              width="150"
-             ></el-table-column>
-             <el-table-column
-               prop="works"
-               label="作品"
-             ></el-table-column>
-             <el-table-column
-               label="操作"
-               width="200"
-             >
-              <template  scope="scope">
-               <el-button @click="handleClick(scope.row)" size="small" type="text">查看</el-button>
-               <el-button  size="small" type="text">编辑</el-button>
-             </template>
-             </el-table-column>
-           </el-table>
         </el-tab-pane >
        </el-tabs>
      </el-col>
@@ -86,29 +59,10 @@ export default {
   data () {
     return {
       swiperList: [],
-      activeName: 'first',
-      tableData: [{
-        data: '2019-12-23',
-        name: '谢云',
-        works: '《青龙图腾》'
-
-      },
-      {
-        data: '2019-12-24',
-        name: '莫桑',
-        works: '《艳鬼》'
-      },
-      {
-        data: '2019-12-25',
-        name: '格格',
-        works: '又帅又厉害'
-      }]
+      activeName: 'first'
     }
   },
   methods: {
-    handleClick (row) {
-      console.log(row)
-    },
     getContentInfo () {
       this.axios.get('../../../static/mock/list.json')
         .then(this.getContentInfoSucc)
@@ -175,6 +129,7 @@ export default {
               height: 40px;
               border-bottom: 2px dashed #cccccc;
               td{
+                padding-right: 10px;
                 span{
                   color: #9b9797
                 }
@@ -194,6 +149,11 @@ export default {
         }
       }
       .main-content{
+        .item-type{
+          font-weight: bold;
+          margin-left: 15px;
+          line-height: 20px
+        }
         p{
           line-height: 30px;
         }

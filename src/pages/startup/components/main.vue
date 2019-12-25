@@ -28,7 +28,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .startup {
-      background: url('login.png');
+      background: url('../../../assets/login.png');
       position: fixed;
       width:100%;
       height: 100%;
