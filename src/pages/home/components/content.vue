@@ -22,11 +22,12 @@ export default {
 .box{
   float: left;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   .img-box{
     width: 20%;
-    height: 200px;
-    float: left;
-    margin: 20px;
+    margin: 10px;
     .el-card{
       border-radius: 10px;
       .image{
