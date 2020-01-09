@@ -1,10 +1,10 @@
 <template>
-  <div  class="box">
-    <div class='img-box' v-for='item of imgList' :key='item.id'>
-      <el-card :body-style="{padding:'5px'}" >
-        <img :src="item.url" class='image'/>
+  <div class="box">
+    <div class="img-box" v-for="item of imgList" :key="item.id">
+      <el-card :body-style="{padding:'5px'}">
+        <img :src="item.url" class="image" />
         <div class="item-desc">
-         <span>{{item.desc}}</span>
+          <span>{{item.desc}}</span>
         </div>
       </el-card>
     </div>
@@ -19,26 +19,26 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.box{
+.box {
   float: left;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  .img-box{
+  .img-box {
     width: 20%;
     margin: 10px;
-    .el-card{
+    .el-card {
       border-radius: 10px;
-      .image{
+      .image {
         width: 100%;
-        display: block
+        display: block;
       }
-      .item-desc{
-       text-align:center;
-       color: rgb(54, 126, 126)
+      .item-desc {
+        text-align: center;
+        color: rgb(54, 126, 126);
       }
     }
- }
+  }
 }
 </style>
