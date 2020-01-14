@@ -23,8 +23,13 @@ export default {
     height: 150px;
     background-color: fff;
     border: 1px solid #cccccc;
+    border-radius: 4px;
     padding: 10px;
     margin: 10px;
+    text-indent: 28px;
+    line-height: 20px;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
   }
 }
 </style>
